@@ -19,21 +19,6 @@ rules:
   - get
   - list
   - watch
-- apiGroups:
-  - extensions
-  resources:
-  - daemonsets
-  - deployments
-  - deployments/scale
-  - ingresses
-  - networkpolicies
-  - replicasets
-  - replicasets/scale
-  - replicationcontrollers/scale
-  verbs:
-  - get
-  - list
-  - watch
 
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
@@ -118,7 +103,22 @@ rules:
   - get
   - list
   - watch
-
+- apiGroups:
+  - extensions
+  resources:
+  - daemonsets
+  - deployments
+  - deployments/scale
+  - ingresses
+  - networkpolicies
+  - replicasets
+  - replicasets/scale
+  - replicationcontrollers/scale
+  verbs:
+  - get
+  - list
+  - watch
+  
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: RoleBinding
